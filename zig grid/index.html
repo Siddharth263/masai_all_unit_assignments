@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2</title>
+    <style>
+        #box{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+            grid-template-areas: 
+            "A B B B C"
+            "D D D E F"
+            "G H I I I"
+        }
+        #box div{
+            padding-left: 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: gray;
+        }
+        #box>div:nth-child(1){
+            grid-area: A
+        }
+        #box>div:nth-child(2){
+            grid-area: B;
+        }
+        #box>div:nth-child(3){
+            grid-area: C;
+        }
+        #box>div:nth-child(4){
+            grid-area: D;
+        }
+        #box>div:nth-child(5){
+            grid-area: E;
+        }
+        #box>div:nth-child(6){
+            grid-area: F;
+        }
+        #box>div:nth-child(7){
+            grid-area: G;
+        }
+        #box>div:nth-child(8){
+            grid-area: H;
+        }
+        #box>div:nth-child(9){
+            grid-area: I;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+        <div><h1></h1></div>
+    </div>
+</body>
+</html>

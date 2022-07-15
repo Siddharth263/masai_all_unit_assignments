@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 1</title>
+    <style>
+        #box{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 0px 10px;
+            grid-template-areas:
+            "A A B B"
+            "C D D D"
+            "E E E E"            
+            ;
+        }
+        #box div{
+            padding-left: 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: gray;
+        }
+        #box>div:nth-child(1){
+            grid-area: A;
+        }
+        #box>div:nth-child(2){
+            grid-area: B;
+        }
+        #box>div:nth-child(3){
+            grid-area: C;
+        }
+        #box>div:nth-child(4){
+            grid-area: D;
+        }
+        #box>div:nth-child(5){
+            grid-area: E;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div><h1>A</h1></div>
+        <div><h1>B</h1></div>
+        <div><h1>C</h1></div>
+        <div><h1>D</h1></div>
+        <div><h1>E</h1></div>
+    </div>
+</body>
+</html>

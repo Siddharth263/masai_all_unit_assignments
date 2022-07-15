@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Pe transaction clone</title>
+    <style>
+        #img {
+            width: 50%;
+        }
+
+        #img>img {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="img">
+        <img src="https://securecdn.pymnts.com/wp-content/uploads/2020/01/Score-Card-Company-Image-25.png"
+            alt="phone pe">
+    </div>
+    <div>
+        <form id="form">
+            <label for="rName"></label>
+            <br>
+            <input id="rName" type="text" placeholder="Enter Reciever's Name">
+            <br>
+            <label for="rcNo"></label>
+            <br>
+            <input id="rcNo" type="number" placeholder="Enter Receiver's Account Number">
+            <br>
+            <label for="sName"></label>
+            <br>
+            <input id="sName" type="text" placeholder="Enter Your Name">
+            <br>
+            <label for="scNo"></label>
+            <br>
+            <input id="scNo" type="number" placeholder="Enter your Number">
+            <br>
+            <label for="amount"></label>
+            <br>
+            <input id="amount" type="number" placeholder="Enter Amount">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div id="otp-form" style="visibility: hidden">
+        <input id="otp" type="number" placeholder="Enter OTP 1234">
+        <br>
+        <br>
+        <button id="chkOtp">Submit</button>
+    </div>
+</body>
+
+</html>
+<script src="./index.js"></script>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ 3</title>
+    <style>
+        #box1 {
+            padding: 1%;
+            background-color: yellow;
+        }
+
+        #box2 {
+            margin-top: 2%;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: repeat(3, 100px);
+            gap: 2%;
+            grid-template-areas:
+                "l r1"
+                "l r2"
+                "l r3"
+        }
+
+        .left {
+            padding: 1%;
+            font-size: 50px;
+            background-color: red;
+        }
+
+        .right {
+            padding: 1%;
+            font-size: 20px;
+            background-color: greenyellow;
+        }
+
+        #box2>div:nth-child(1) {
+            grid-area: l;
+        }
+
+        #box2>div:nth-child(2) {
+            grid-area: r1;
+        }
+
+        #box2>div:nth-child(3) {
+            grid-area: r2;
+        }
+
+        #box2>div:nth-child(4) {
+            grid-area: r3;
+        }
+
+        @media screen and (min-width:480px) and (max-width:719px) {
+            #box2 {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 300px 100px;
+                grid-template-areas:
+                    "l l l"
+                    "r1 r2 r3"
+            }
+        }
+        @media screen and (min-width:360px) and (max-width:479px) {
+            #box2 {
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px 100px 100px 100px;
+                grid-template-areas:
+                    "l"
+                    "r1"
+                    "r2"
+                    "r3"
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <h1>Navigation</h1>
+    </div>
+    <div id="box2">
+        <div class="left">Left</div>
+        <div class="right">Right1</div>
+        <div class="right">Right2</div>
+        <div class="right">Right3</div>
+    </div>
+</body>
+
+</html>

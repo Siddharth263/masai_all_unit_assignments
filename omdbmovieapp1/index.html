@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB Movie App I</title>
+</head>
+
+<body>
+    <div>
+        <h1>OMDB Movie App I</h1>
+    </div>
+    <div>
+        <form id="form">
+            <input type="text" id="movie">
+            <br>
+            <br>
+            <input type="submit" value="Search" id="search">
+        </form>
+    </div>
+    <div>
+        <input type="number" id="year" placeholder="Enter the year to get movies relased later">
+        <button id="filter">Filter</button>
+    </div>
+    <div id="list">
+        <!-- append all the movies to id = list-->
+    </div>
+</body>
+
+</html>
+
+<script>
+    let form = document.getElementById("form");
+    let div = document.querySelector("#list"); // parent div
+    let movies;
+    let array;
+
+    form.addEventListener("submit", list);
+
+    async function list() {
+        event.preventDefault();
+        let name = form.movie.value;
+        const url = `https://www.omdbapi.com/?apikey=c6a8c372&s=${name}`;
+
+        let error_img = "https://cdn.presslabs.com/wp-content/uploads/2018/03/custom-error-pages.png";
+        let data = await fetch(url);
+        movies = await data.json();
+        array = movies.Search;
+
+        try {
+            div.innerHTML = " ";
+            append(array);
+        } catch (error) {
+            let img = document.createElement("img");
+            img.src = error_img;
+            div.append(img);
+        }
+    }
+
+    document.querySelector("#filter").addEventListener("click",function(){
+        filterFun(array);
+    });
+    function filterFun(array) {
+        div.innerHTML = " ";
+        let newList = array.filter(function (el) {
+            let year = document.querySelector("#year").value;
+            return el.Year >= year;
+        })
+        if(newList.length>0){
+            append(newList);
+        }
+        else {
+            let h1 = document.createElement("h1");
+            h1.innerText = "No Movie found";
+            div.append(h1);
+        }
+    }
+
+
+    function append(movies) {
+        movies.forEach(function (el, index) {
+            div.style.display = "grid";
+            div.style.gridTemplateColumns = "repeat(3, 1fr)";
+            div.style.gap = "40px 20px";
+            div.style.marginTop = "20px";
+
+            let img = document.createElement("img");
+            img.src = el.Poster;
+
+            let p = document.createElement("p");
+            p.innerText = el.Title;
+
+            let year = document.createElement("p");
+            year.innerText = el.Year;
+
+            let divI = document.createElement("div");
+            divI.append(img)
+
+            let divC = document.createElement("div");
+            divC.append(p, year);
+
+            let divP = document.createElement("div");
+            divP.append(divI, divC);
+
+            div.append(divP)
+        })
+    }
+</script>

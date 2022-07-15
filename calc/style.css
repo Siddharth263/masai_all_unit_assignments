@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+    color: teal;
+}
+
+#calculator {
+    height: 600px;
+    width: 30%;
+    border: 1px solid transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#display {
+    height: 15%;
+    width: 85%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+#keyboard {
+    border: 1px solid transparent;
+    width: 85%;
+    height: 75%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,auto);
+    gap: 10px;
+}
+#keyboard>div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#keyboard>div:hover{
+    background-color: gray;
+}
+.black{
+    background-color: black;
+    color: white;
+}
+.red{
+    background-color: red;
+    color: white;
+}

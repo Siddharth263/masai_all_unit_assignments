@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #box1{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #box1>input{
+            height: 40px;
+            border-radius: 10px;
+            border: none ;
+            background-color: lightgray;
+        }
+        #box2{
+            display: flex;
+            justify-content: center;
+        }
+        #box2>button{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 25px;
+            margin: 20px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <input id="input1" type="number" placeholder="Enter 1st Number">
+        <input id="input2" type="number" placeholder="Enter 2nd Number">
+    </div>
+    <div id="box2">
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">Subtract</button>
+        <button onclick="mul()">Multiply</button>
+        <button onclick="div()">Divide</button>
+    </div>
+</body>
+</html>
+<script>
+    function add(){
+        let x=document.getElementById("input1").value;
+        let y=document.getElementById("input2").value;
+        x = +x; y = +y;
+        alert(Math.abs(x+y));
+    }
+    function sub(){
+        let x=document.getElementById("input1").value;
+        let y=document.getElementById("input2").value;
+        x = +x; y = +y;
+        alert(Math.abs(x-y));
+    }
+    function mul(){
+        let x=document.getElementById("input1").value;
+        let y=document.getElementById("input2").value;
+        x = +x; y = +y;
+        alert(x*y);
+    }
+    function div(){
+        let x=document.getElementById("input1").value;
+        let y=document.getElementById("input2").value;
+        x = +x; y = +y;
+        alert(x/y);
+    }
+</script>

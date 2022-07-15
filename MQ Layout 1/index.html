@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ Layout 1</title>
+    <style>
+        #nav {
+            padding: 20px;
+            background-color: yellow;
+            font-size: 70px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #box {
+            margin-top: 20px;
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: repeat(4, 400px);
+            grid-template-rows: repeat(1, 400px);
+            font-size: 70px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            gap: 30px;
+        }
+
+        #box1 {
+            padding: 20px;
+            background-color: red;
+        }
+
+        #box2 {
+            padding: 20px;
+            background-color: green;
+        }
+
+        #box3 {
+            padding: 20px;
+            background-color: blue;
+        }
+
+        #box4 {
+            padding: 20px;
+            background-color: gray;
+        }
+
+        @media screen and (min-width:480px) and (max-width:720px) {
+            #box {
+                grid-template-columns: repeat(2, 400px);
+                grid-template-rows: repeat(2, 400px);
+                grid-template-areas:
+                    "b1 b3"
+                    "b2 b4"
+            }
+
+            #box1 {
+                grid-area: b1;
+            }
+
+            #box2 {
+                grid-area: b2;
+            }
+
+            #box3 {
+                grid-area: b3;
+            }
+
+            #box4 {
+                grid-area: b4;
+            }
+        }
+
+        @media screen and (min-width:360px) and (max-width:479px){
+            #box {
+                grid-template-columns: repeat(1, 400px);
+                grid-template-rows: repeat(4, 400px);
+                grid-template-areas:
+                    "b1"
+                    "b4"
+                    "b2"
+                    "b3";
+            }
+
+            #box1 {
+                grid-area: b1;
+            }
+
+            #box2 {
+                grid-area: b2;
+            }
+
+            #box3 {
+                grid-area: b3;
+            }
+
+            #box4 {
+                grid-area: b4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        Navigation
+    </div>
+    <div id="box">
+        <div id="box1">Box1</div>
+        <div id="box2">Box2</div>
+        <div id="box3">Box3</div>
+        <div id="box4">Box4</div>
+    </div>
+</body>
+
+</html>

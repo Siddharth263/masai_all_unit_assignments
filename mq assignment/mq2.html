@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ 2</title>
+    <style>
+        #box1 {
+            background-color: yellow;
+        }
+
+        #box2 {
+            margin-top: 1%;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 500px;
+            gap: 3%;
+        }
+
+        #box2>div {
+            font-size: 50px;
+        }
+
+        #box2>div:nth-child(1) {
+            background-color: red;
+        }
+
+        #box2>div:nth-child(2) {
+            background-color: greenyellow;
+        }
+
+        @media screen and (min-width:360px) and (max-width:479px) {
+            #box2 {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2, 100%);
+                gap: 15%;
+                grid-template-areas: 
+                "r"
+                "g";
+            }
+
+            #box2>div:nth-child(1) {
+                grid-area: r;
+            }
+
+            #box2>div:nth-child(2) {
+                grid-area: g;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="box1">
+            <h1>Navigation</h1>
+        </div>
+        <div id="box2">
+            <div>Left</div>
+            <div>Right</div>
+        </div>
+    </div>
+</body>
+
+</html>
