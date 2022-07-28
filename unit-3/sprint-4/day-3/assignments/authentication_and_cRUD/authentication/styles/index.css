@@ -1,0 +1,15 @@
+#forms{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+#forms>div{
+    width: 50%;
+    display: grid;
+    padding: 10px;
+}
+form>input{
+    margin-bottom: 1%;
+    width: 30%;
+    box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+.displayHotels {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid red;
+
+}
+
+img{
+    width: 10px;
+    height: 10px;
+}

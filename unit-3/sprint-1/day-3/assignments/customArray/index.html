@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Array</title>
+</head>
+
+<body>
+    <h1>Custom Array</h1>
+</body>
+
+</html>
+
+<script>
+    // constructor function for custom array
+    function customArray(n, id, course) {
+        this.name = n,
+            this.sizeName = n.length,
+            this.Id = id,
+            this.IdSize = id.length,
+            this.Course = course,
+            this.courseSize = course.length
+    }
+
+    // let obj = new customArray('Priyanshu', 'fw19_0453', "JS-201");
+    // let obj1 = new customArray('Abhay', 'fw19_0454', "JS-201");
+    // let obj2 = new customArray('Ajay', 'fw19_0455', "JS-201");
+    // let obj3 = new customArray('Aman', 'fw19_0456', "JS-201");
+    // let arr = [];
+    // arr.push(obj);
+    // arr.push(obj1);
+    // arr.push(obj2);
+    // arr.push(obj3);
+
+    arr = [0, 1, 2, 3, 4, 5]
+
+    // console.log(arr);
+    Array.prototype.myPop = function () {
+        if (this.length === 0) {
+            console.log("Empty Array");
+        }
+        else {
+            this.pop();
+        }
+    }
+
+    Array.prototype.myPush = function (value) {
+        this.push(value);
+    }
+
+    Array.prototype.myForEach = function (func) {
+        for (let i = 0; i < this.length; i++) {
+            func(this[i], i);
+        }
+    }
+
+    Array.prototype.myMap = function (func) {
+        let newArr = [];
+        for (let i = 0; i < this.length; i++) {
+            let element = this[i];
+            let x = func(element);
+            newArr.push(x);
+        }
+        return newArr;
+    }
+
+    Array.prototype.myFilter = function (func) {
+        let newArr = [];
+        for (let i = 0; i < this.length; i++) {
+            let x = func(this[i], i);
+            newArr.push(x);
+        }
+        return newArr;
+    }
+
+    Array.prototype.myReduce = function (func) {
+        let newArr = [];
+        for(let i = 1;i<this.length;i++) {
+            let x = func(this[i-1], this[i]);
+            newArr.push(x);
+        }
+        return newArr;
+    }
+</script>

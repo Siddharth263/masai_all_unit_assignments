@@ -1,0 +1,26 @@
+#slideshow{
+    border: 1px solid;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2%;
+}
+#slideshow>img{
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    height: 500px;
+}
+button{
+    padding:5px 15px;
+    border: none;
+    border-radius:5px;
+    margin-right: 2%;
+    margin-top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+button:hover{
+    background-color:black;
+    color: white;
+    cursor: pointer;
+}

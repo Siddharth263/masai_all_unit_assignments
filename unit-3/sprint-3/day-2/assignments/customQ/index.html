@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Queue</title>
+</head>
+<body>
+    <h1>Custom Queue</h1>
+</body>
+</html>
+<script>
+    class Q{
+        constructor(){
+            this.length = 0;
+            this.q = [];
+        }
+        enQueue(...a){
+            for(let i=0;i< a.length; i++){
+                this.q.push(a[i]);
+                this.length++;
+            }
+            console.log(this.q);
+        }
+        deQueue(){
+            let index = 0;
+            for(let i = 0; i < this.length; i++){
+                if(i= this.length-1){
+                    delete this.q[i];
+                    this.q.length--;
+                    this.length--;
+                }
+                this.q[index] = this.q[index+1];
+                index++;
+            }
+            console.log(this.q);
+        }
+
+    }
+
+    let q1 = new Q();
+    q1.enQueue(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+    q1.deQueue();
+</script>

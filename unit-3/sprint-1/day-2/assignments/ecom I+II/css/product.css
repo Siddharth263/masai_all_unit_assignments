@@ -1,0 +1,21 @@
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    font-family: sans-serif;
+    color: gray;
+}
+#navbar>a {
+    color: black;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#navbar>a:hover {
+    background-color: rgb(97, 97, 97);
+    color: white;
+}

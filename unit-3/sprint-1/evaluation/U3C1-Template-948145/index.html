@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-color: rgb(163, 163, 163);
+      }
+      form{
+        padding: 20px 15px;
+        width:30%;
+        margin: auto;
+        border-radius: 10px;
+        background-color: gray;
+      }
+      form>input{
+        border-radius: 5px;
+        border: none;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 5px 15px;
+      }
+      input[type="submit"]:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="submit"]{
+        padding: 10px 20px;
+      }
+      div>h2{
+        width: 20%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding: 10px;
+        background-color:whitesmoke;
+        border-radius: 10px;
+      }
+      h2>a{
+        text-decoration: none;
+        color:black
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="menu">
+      <h2><a href="inventory.html">Show Products</a></h2>
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+    </div>
+    <div>
+      <h2>Add Products</h2>
+      <!--Create a form here to accept product data from user, give form HTML id as "product_form"-->
+      <form>
+        <label for="brand">Brand</label>
+        <br>
+        <input type="text" id="product_brand">
+        <br>
+        <label for="Name">Name</label>
+        <br>
+        <input type="text" id="product_name">
+        <br>
+        <label for="Price">Price</label>
+        <br>
+        <input type="text" id="product_price">
+        <br>
+        <label for="Image">Image</label>
+        <br>
+        <input type="text" id="product_image">
+        <br>
+        <input type="submit" value="Submit">
+        <br>
+      </form>
+      <!--Create four inputs to accept brand, name, price, image and brand-->
+      <!--give the inputs following respective id's, "product_brand", "product_name", "product_price","product_image"-->
+      <!--create a submit option to submit form, give it html id as "submit"-->
+      </form>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>

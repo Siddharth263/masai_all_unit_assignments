@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Array</title>
+</head>
+
+<body>
+    <h1>Custom Array</h1>
+</body>
+
+</html>
+<script>
+    class Stack {
+        constructor() {
+            this.length = 0;
+            this.stack = [];
+        }
+        push(...a) {
+            for (let i = 0; i < a.length; i++) {
+                this.stack.push(a[i]);
+                this.length++;
+            }
+        }
+        remove() {
+            delete this.stack[this.stack.length - 1];
+            this.stack.length--;
+            this.length--;
+            return (this.stack);
+        }
+        forEach(fun, index) {
+            if (!index) {
+                for (let i = 0; i < this.length; i++) {
+                    fun(el)
+                }
+            }
+            else {
+                for (let i = 0; i < this.length; i++) {
+                    fun(el, i);
+                }
+            }
+        }
+        map(fun) {
+            if (!index) {
+                for (let i = 0; i < this.length; i++) {
+                    fun(el);
+                }
+            }
+            else {
+                for (let i = 0; i < this.length; i++) {
+                    fun(el, index);
+                }
+            }
+        }
+        filter(fun, index) {
+            if (!index) {
+                for (let i = 0; i < this.length; i++) {
+                    fun(el);
+                }
+            }
+            else {
+                for (let i = 0; i < this.length; i++) {
+                    fun(el, index);
+                }
+            }
+        }
+        reduce(fn, preValue, curValue) {
+            if (!preValuu && !curValue) {
+                preValue = 0, curValue = 1;
+                for (let i = preValue; i < this.length; i++) {
+                    fn(this.stack[i], this.stack[i + 1]);
+                }
+            }
+            else {
+                for (let i = 0; i < this.length; i++) {
+                    fn(this.stack[i], this.stack[i + 1]);
+                }
+            }
+        }
+    }
+
+    let s1 = new Stack();
+    s1.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+
+    s1 = s1.remove();
+
+    s1.forEach((el, index) => {
+        console.log(`${index} : ${el}`);
+    })
+
+    s1 = s1.map((el) => {
+        return el * 2;
+    })
+
+    s1 = s1.filter((el) => {
+        return el % 2 === 0;
+    })
+    console.log(s1);
+    
+    const preValue = 2;
+    const curValue = 3;
+    
+    let s2 = s1.reduce((preValue,curValue)=>{
+        return preValue+curValue;
+    })
+    
+</script>

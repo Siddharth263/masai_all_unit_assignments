@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Mini App I</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/0a290f3bd8.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="popularVideos()">
+    <div id="sidebar">
+        <div id='icons'></div>
+        <div id="menu">
+            <div class="sidebar">
+                <div>
+                    <h3>Home</h3>
+                </div>
+                <div>
+                    <h3>Explore</h3>
+                </div>
+                <div>
+                    <h3>Shorts</h3>
+                </div>
+                <div>
+                    <h3>Subscriptions</h3>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div>
+                    <h3>Library</h3>
+                </div>
+                <div>
+                    <h1>History</h1>
+                </div>
+            </div>
+            <div class="sidebar">
+                <p>Sign in to like videos, comment, and subscribe.</p>
+                <button id="signup">SIGN IN</button>
+
+            </div>
+            <div class="sidebar">
+                Explore
+                <ul>
+                    <li>Music</li>
+                    <li>Sports</li>
+                    <li>Gaming</li>
+                    <li>Movies</li>
+                    <li>News</li>
+                    <li>Live</li>
+                    <li>Fashion & Beauty</li>
+                    <li>Learning</li>
+                    <li>Spotlight</li>
+                    <li>360 Video</li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div>Browse Channel</div>
+            </div>
+            <div class="sidebar">
+                MORE FROM YOUTUBE
+                <ul>
+                    <li>YouTube Premium</li>
+                    <li>YouTube Music</li>
+                    <li>YouTube Kids</li>
+                    <li>YouTube TV</li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div>
+                    <h3>Settings</h3>
+                </div>
+                <div>
+                    <h3>Report History`</h3>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                </div>
+                <div>
+                    <h3>Send Feedback</h3>
+                </div>
+            </div>
+            <div class="sidebar">
+                <p>AboutPressCopyrightContact usCreatorsAdvertiseDevelopers</p>
+                <p>TermsPrivacyPolicy & SafetyHow YouTube worksTest new features</p>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div id="navbar">
+            <div id="Sidebar">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div id="logo">
+                <img src="https://static.vecteezy.com/system/resources/previews/003/206/623/original/youtube-editorial-app-icon-free-vector.jpg"
+                    alt="youtube">
+            </div>
+            <div id="search-box">
+                <input type="text" id="query" placeholder="Search">
+                <button onclick="search()">Search</button>
+                <button id="sort" onclick="sort()">Sort</button>
+            </div>
+            <div id="btn">
+                <button id="signup">SIGN IN</button>
+            </div>
+        </div>
+        <br>
+        <div id="display">
+            <!-- append the data here -->
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./js/index.js"></script>

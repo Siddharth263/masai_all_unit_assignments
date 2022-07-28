@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Model</title>
+</head>
+<body>
+    <h1>Inheritance Model</h1>
+</body>
+</html>
+<script>
+    // engine, steering, wheels, exhaust, brakes, suspension, doors, windshields
+    // using object.create method we will use the property of blueprintCar{}
+    
+    let blueprintCar = {
+        engine : "engine",
+        steering: "steering",
+        wheels:"wheels",
+        exhaust:"exhaust",
+        brakes:"brakes",
+        suspension: "suspension",
+        doors:"doors",
+        windshields:"windshields"
+    }
+
+    let alto = Object.create(blueprintCar);
+    console.log("using object.create method we will use the property of blueprintCar{}:");
+    console.log("alto.engine: ",alto.engine);
+
+    // using constructor functions to perform the same operation
+
+    function inheritanceModel() {
+        this.engine = "engine";
+        this.steering = "steering";
+        this.wheels = "wheels";
+        this.exhaust = "exhaust";
+        this.brakes = "brakes";
+        this.suspension = "suspension";
+        this.doors = "doors";
+        this.windshields = "windshields";
+    }
+
+    let baleno = new inheritanceModel();
+    console.log("using constructor functions to perform the same operation:");
+    console.log("baleno.engine:",baleno.engine);
+
+
+</script>
